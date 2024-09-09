@@ -1,0 +1,21 @@
+import java.util.Random;
+
+public class rmg {
+     public  static  void  main ( String[] args) {
+   
+         int  lowerlimit =10;
+         int upperlimit =50;
+         Random  random =  new Random ();
+         int randomnumber = random.nextInt (upperlimit - lowerlimit +1)+ lowerlimit;
+         System.out.println (" Generated Random Number:"+ randomnumber);
+         if (randomnumber <=20) {
+          System.out.println("Generated number is in the value range(10,20]");
+         }else if (randomnumber <=30) {
+            System.out.println("Generated number is in the value range(20,30]");
+         }else if (randomnumber <=40) {
+           System.out.println("Generated number is in the value range(30,40]");
+         }else {
+          System.out.println("Generated number is in the value range(40,50]");
+           }
+       }
+}
