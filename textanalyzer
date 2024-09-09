@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class textanayzer{
+   public static void main(String[] args){
+      Scanner sscanner=new Scanner(System.in);
+      System.out.println("enter your text(press enter twice to finish):");
+      int charCount=0;
+      int wordCount=0;
+      int lineCount=0;
+      while (sscanner.hasNextLine()){
+          String line=sscanner.nextLine();
+          if(line.isEmpty()){
+             break;
+          }
+         
+          lineCount++;
+          charCount+=line.length();
+          String[]words=line.trim().split("\\s+");
+           wordCount+=words.length;
+           }
+           System.out.println("Number of characters:"+charCount);
+           System.out.println("number of words:"+wordCount);
+           System.out.println("number of lines:"+lineCount);
+       }
+}
